@@ -1,0 +1,85 @@
+/* Set the background container to cover the entire viewport */
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Style for the background image */
+.background-image {
+    /* Set the background image and make it cover the container */
+    background-image: url("https://static.zara.net/photos///contents/mkt/spots/aw23-studio-collection-maintenance/subhome-xmedia-worldwide//w/1920/IMAGE-landscape-b29e5cc4-cf63-44eb-a40a-790820ec5bc8-default_0.jpg?ts=1696274966708");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* Style for the main content */
+.content {
+    text-align: center;
+    padding: 20px;
+    color: white;
+    position: relative;
+}
+
+/* Style for the select boxes container */
+.select-boxes {
+    position: fixed;
+    top: 60%;
+    left: 40px;
+    margin-left: 50px;
+}
+
+/* Style for the select boxes */
+select {
+    width: 340px;
+    height: 35px;
+    padding: 10px;
+    font-size: 14px;
+    margin: 10px;
+}
+
+/* Style for the button */
+button {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    font-size: 14px;
+    border: 2px solid white;
+    cursor: pointer;
+    margin: 10px;
+    height: 35px;
+}
+
+/* Media query for screens with a maximum width of 768px or less */
+@media (max-width: 768px) {
+    .background-container {
+        height: auto;
+    }
+
+    .background-image {
+        height: auto;
+        background-size: contain; /* Adjust as needed */
+    }
+
+    .select-boxes {
+        position: relative;
+        top: auto;
+        left: auto;
+        margin: 0;
+    }
+
+    select {
+        width: 100%;
+    }
+}
+
+/* Media query for screens with a maximum width of 480px or less */
+@media (max-width: 480px) {
+    button {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+}

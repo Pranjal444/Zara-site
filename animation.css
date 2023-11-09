@@ -1,0 +1,254 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Header styles */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between; /* Align elements to the right */
+    align-items: center;
+    padding: 0 20px;
+    z-index: 1; /* Set a higher z-index to position the header above the image */
+}
+
+.logo {
+    max-width: 200px; /* Adjust the size as needed */
+    animation: logoScale 2s ease-in-out forwards;
+    margin-left: -920px; /* Adjust margin for the logo */
+}
+
+.menu {
+    display: flex; /* Display menu items in a row */
+    align-items: center;
+    margin-left: -100px; /* Adjust margin for the menu */
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+    margin: 0 20px;
+    margin-top: 40px;
+}
+
+.rightoptions {
+    display: flex;
+    align-items: flex-start; /* Align items at the start (top) of the container */
+    margin-top: -100px;
+}
+
+.search-box {
+    margin-right: 0; /* Change margin-right to move the search box closer */
+    margin-top: 70px;
+}
+
+/* Style for "HELP" and "SHOPPING BAG" */
+.rightoptions a {
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+}
+
+/* Slideshow container styles */
+.slideshow-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: none;
+}
+
+.slide.active {
+    display: block;
+}
+
+@keyframes logoScale {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1.5);
+    }
+}
+
+/* top left side hamburger section */
+#hamburger {
+    width: 80px;
+    height: 40px;
+}
+
+#hamburgerIcon {
+    width: 25%;
+    padding-top: 1.2em;
+    padding-left: 1.5em;
+    cursor: pointer;
+    margin-top: -100px;
+}
+
+/* Logo animation */
+.logo {
+    max-width: 300px;
+    animation: logoScale 2s ease-in-out forwards;
+    margin-left: -00px; /* Adjust margin for the logo */
+    margin-top: 30px;
+}
+
+@keyframes logoScale {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.5);
+    }
+}
+
+/* Search box animation */
+.search-box {
+    margin-top: -5px;
+    transition: transform 2s ease-in-out;
+    transform: translateY(100%);
+}
+
+.search-box.active {
+    transform: translateY(0);
+}
+
+/* Popup styles */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.open-popup {
+    display: flex;
+    margin-left: -400px;
+}
+
+.categories {
+    display: none;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 600px;
+    margin-left: 300px;
+}
+.categories h3 {
+    margin: 0;
+}
+
+.categories ul {
+    list-style: none;
+    padding: 0;
+}
+
+.categories li {
+    margin: 5px 0;
+    display: inline-block; /* Display li elements inline */
+    margin-right: 20px; /* Add space between li elements */
+}
+.categories1 {
+  
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 600px;
+   margin-left: 600px;
+}
+.categories1 h3 {
+    margin: 0;
+}
+
+.categories1 ul {
+    list-style: none;
+    padding: 0;
+}
+
+.categories1 li {
+    margin: 5px 0;
+    display: inline-block; /* Display li elements inline */
+    margin-right: 10px; /* Add space between li elements */
+}
+.popup button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.category-logo{
+    width: 200px;
+    height: 100px;
+}
+#hamburger-popup {
+background-color: white;
+margin-left: -600px;
+}
+/* CSS */
+.main-menu {
+background-image: linear-gradient(#f7f8fa ,#e7e9ec);
+border-color: #adb1b8 #a2a6ac #8d9096;
+border-style: solid;
+border-width: 1px;
+border-radius: 3px;
+box-shadow: rgba(255,255,255,.6) 0 1px 0 inset;
+box-sizing: border-box;
+color: #0f1111;
+cursor: pointer;
+display: inline-block;
+font-family: "Amazon Ember",Arial,sans-serif;
+font-size: 14px;
+height: 29px;
+font-size: 13px;
+outline: 0;
+overflow: hidden;
+padding: 0 11px;
+text-align: center;
+text-decoration: none;
+text-overflow: ellipsis;
+user-select: none;
+-webkit-user-select: none;
+touch-action: manipulation;
+white-space: nowrap;
+}
+
+.button-14:active {
+border-bottom-color: #a2a6ac;
+}
+
+.button-14:active:hover {
+border-bottom-color: #a2a6ac;
+}
+
+.button-14:hover {
+border-color: #a2a6ac #979aa1 #82858a;
+}
+
+.button-14:focus {
+border-color: #e77600;
+box-shadow: rgba(228, 121, 17, .5) 0 0 3px 2px;
+outline: 0;
+}
+.close {
+font-size: 45px;
+font-weight: 600;
+}

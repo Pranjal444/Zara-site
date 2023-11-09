@@ -1,0 +1,19 @@
+#bag {
+    text-align: center;
+    padding: 10px;
+    margin-top: 150px;
+    margin-left: -900px;
+    
+}
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 1;
+    border-bottom: 2px solid black; /* Add a black bottom border */
+}

@@ -1,0 +1,66 @@
+  header {
+    display: flex;
+    position: sticky;
+    background-color: white;
+    top: 0;
+    z-index: 1;
+  }
+  /* main container   */
+  #main {
+    width: 92.5%;
+    /* border: 1px solid red; */
+    margin-left: 7.5%;
+  }
+    /* search baar  */
+  #searchbar {
+    margin-top: 1.6em;
+    width: 98%;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid black;
+    padding: 0.2em 0em;
+    font-size: 1.0em;
+    font-weight: bold;
+  }
+  #searchbar::placeholder {
+    color: black;
+  }
+  /* media queries ---------------------------- */
+  @media screen and (min-width: 360px) and (max-width: 741px) {
+   #main {
+      width: 90%;
+      margin: auto;
+      /* border: 1px solid red; */
+    }
+    #searchbar {
+      margin-top: 1.6em;
+      width: 100%;
+      outline: none;
+      border: none;
+      border-bottom: 2px solid black;
+      padding: 0.2em 0em;
+      font-size: 1.9em;
+      font-weight: bold;
+      /* border: 1px solid red; */
+    }
+   @media screen and (min-width: 0px) and (max-width: 360px) {
+    
+      #main {
+        width: 90%;
+        margin: auto;
+        /* border: 1px solid red; */
+      }
+      #searchbar {
+        margin-top: 1.6em;
+        width: 100%;
+        outline: none;
+        border: none;
+        border-bottom: 2px solid black;
+        padding: 0.2em 0em;
+        font-size: 1.9em;
+        font-weight: bold;
+        /* border: 1px solid red; */
+      }
+  }
+    
+}

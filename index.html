@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./styles/backgroundimg.css" />
+</head>
+<body>
+    <!-- Create a container for the background image -->
+    <div class="background-container">
+        <div class="background-image"></div>
+    </div>
+    <!-- Create a content container for the text and other content -->
+    <div class="content">
+        <!-- Select boxes container -->
+        <div class="select-boxes">
+            <!-- Select box for countries with an empty default option -->
+            <select id="countries" onchange="checkCountryAndLanguage()" aria-placeholder=" hii">
+                <option value="india">India</option>
+                <option value="usa">United States</option>
+                <option value="canada">Canada</option>
+                <option value="uk">United Kingdom</option>
+                <!-- Add more countries as needed -->
+            </select>
+
+            <!-- Select box for languages with an empty default option -->
+            <select id="languages" onchange="checkCountryAndLanguage()">
+                <option value="english">English</option>
+                <option value="spanish">Spanish</option>
+                <option value="french">French</option>
+                <!-- Add more languages as needed -->
+            </select>
+
+            <!-- Button for user interaction -->
+            <button type="button" id="go-button" onclick="openHomePage()">Go</button>
+        </div>
+    </div>
+    <div id="footer">
+        <p>Copyright &copy; 2023 My Website</p>
+      </div>
+      
+</body>
+<script src="./scripts/index.js"></script>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="styles/footer.css">
+</head>
+<style>
+    /* CSS for the photo section */
+    .photo-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px;
+    }
+
+    .photo {
+        width: 280px; /* Adjust the size as needed */
+        height: 220px;
+        transition: transform 0.5s ease; /* Animation */
+        border: 1px solid black;
+        
+    }
+
+    .photo:hover {
+        transform: scale(1.1); /* Zoom in on hover */
+    }
+    .price-tag {
+        text-align: center;
+        font-weight: bold;
+        border: 1px solid black;
+    }
+    .btn{
+            margin-top: 80px;
+        }
+        @media only screen and (max-width: 768px) {
+        /* Adjust styles for smaller screens */
+        
+        /* Example: Adjust the photo size for smaller screens */
+        .photo-section {
+        margin: 0;
+    }
+        .photo {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Example: Adjust the menu items for smaller screens */
+        .menu-items {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .menu-items li {
+            margin-bottom: 1opx;
+        }
+        .righoptions{
+            display: flex;
+            flex-direction: column;
+        }
+        /* Add more styles as needed for a better mobile experience */
+    }
+</style>
+<body>
+    <header>
+        <nav>
+            <div class="navbar">
+                <div class="container nav-container">
+                    <input class="checkbox" type="checkbox" name="" id="" />
+                    <div class="hamburger-lines">
+                        <span class="line line1"></span>
+                        <span class="line line2"></span>
+                        <span class="line line3"></span>
+                    </div>
+                    <div class="logo-and-menu">
+                        <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Zara_Logo.svg/1280px-Zara_Logo.svg.png" alt="Zara Logo">
+                    </div>
+                    <div class="menu-items">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="#">about</a></li>
+                        <li><a href="#">blogs</a></li>
+                        <li><a href="#">portfolio</a></li>
+                        <li><a href="#">contact</a></li>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="rightoptions">
+            <a href="./search.html">
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="SEARCH" style="width: 300px; height: 30px;" />
+                </div>
+            </a>
+            <a href="login.html">LOG IN</a>
+            <a href="zarahelp.html">HELP</a>
+            <a href="shoppingBasket.html">SHOPPING BAG</a>
+        </div>
+    </header>
+
+    <section>
+        <button class="btn" ><a href="beautybestsellers.html">BEST SELLERS</a></button>    
+    <button class="btn" ><a href="lips.html">LIPS</a></button>
+    <button  class="btn" ><a href="face.html">FACE</a></button>
+    <button  class="btn"><a href="nailpaint.html">NAIL POLISH</a></button>
+    <button  class="btn"><a href="shadefinder.html">SHADE FINDER</a></button>
+    <button  class="btn"><a href="jeans.html">DISCOVER</a></button>
+     
+             
+             
+            
+        
+            <section class="photo-section">
+                <div>
+                    <img class="photo" src="https://static.zara.net/photos///2021/I/2/1/p/4130/317/642/2/w/443/4130317642_6_1_1.jpg?ts=1633511455342" alt="Image 1">
+                    <div class="price-tag">₹790</div>
+                </div>
+                <div>
+                    <img class="photo" src="https://static.zara.net/photos///2021/I/2/1/p/4130/314/141/2/w/443/4130314141_6_1_1.jpg?ts=1633511452165" alt="Image 2">
+                    <div class="price-tag">₹790</div>
+                </div>
+                <div>
+                    <img class ="photo" src="https://static.zara.net/photos///2021/V/2/1/p/4130/105/734/2/w/443/4130105734_6_1_1.jpg?ts=1621438194953" alt="Image 3">
+                    <div class="price-tag">₹1790</div>
+                </div>
+                <div>
+                    <img class="photo" src="https://static.zara.net/photos///2022/I/2/1/p/4140/001/250/2/w/443/4140001250_6_1_1.jpg?ts=1654526361659" alt="Image 1">
+                    <div class="price-tag">₹1590</div>
+                </div>
+                
+            </section>
+            <section class="photo-section">
+                <div>
+                    <img class="photo" src="https://static.zara.net/photos///2021/V/2/1/p/4130/200/807/2/w/443/4130200807_6_1_1.jpg?ts=1619781633091" alt="Image 1">
+                    <div class="price-tag">₹990</div>
+                </div>
+                <div>
+                    <img class="photo" src="https://static.zara.net/photos///2023/I/2/1/p/4140/500/182/2/w/443/4140500182_6_1_1.jpg?ts=1692281798890" alt="Image 2">
+                    <div class="price-tag">₹490</div>
+                </div>
+                <div>
+                    <img class ="photo" src="https://static.zara.net/photos///2022/V/2/1/p/4140/509/250/2/w/443/4140509250_6_1_1.jpg?ts=1647362350884" alt="Image 3">
+                    <div class="price-tag">₹1290</div>
+                </div>
+                <div>
+                    <img class="photo" src="https://static.zara.net/photos///2021/I/2/1/p/4280/100/142/2/w/443/4280100142_6_1_1.jpg?ts=1637258340298" alt="Image 1">
+                    <div class="price-tag">₹1290</div>
+                </div>
+            </section>
+            <section class="photo-section">
+                <div>
+                    <img class="photo" src="https://static.zara.net/photos///2021/V/2/1/p/4400/419/609/2/w/443/4400419609_6_1_1.jpg?ts=1619784132730" alt="Image 1">
+                    <div class="price-tag">₹590</div>
+                </div>
+                <div>
+                    <img class="photo" src="https://static.zara.net/photos///2021/V/2/1/p/4130/838/737/2/w/443/4130838737_6_1_1.jpg?ts=1620122080743" alt="Image 2">
+                    <div class="price-tag">₹1990</div>
+                </div>
+                <div>
+                    <img class ="photo" src="https://static.zara.net/photos///2022/V/2/1/p/4130/211/753/2/w/443/4130211753_6_1_1.jpg?ts=1649254007454" alt="Image 3">
+                    <div class="price-tag">₹2900</div>
+                </div>
+                <div>
+                    <img class="photo" src="https://static.zara.net/photos///2022/I/2/1/p/4140/503/250/2/w/600/4140503250_6_1_1.jpg?ts=1661418123738" alt="Image 1">
+                    <div class="price-tag">₹950</div>
+                </div>
+                
+            </section>
+            <footer>
+                <div class="video-background">
+                    <video id="video" class="slide" controls autoplay style="width: 100%; height: 100%;">
+                        <source src="videoplayback.mp4" type="video/mp4">
+                    </video>
+                    
+                    <div class="content-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                        <h2 style="color: white;">Pranjal Pagar</h2>
+                        <div class="container">
+                            <div class="row">
+                                <!-- Your existing footer content here -->
+                                <div class="col-md-3">
+                                    <div class="useful-link">
+                                        <h2 style="color: white;">Useful Links</h2>
+                                        <div class="use-links">
+                                            <ul>
+                                                <li><a href="index.html" style="color: white;"><i class="fa-solid fa-angles-right"></i> Home</a></li>
+                                                <li><a href="about.html" style="color: white;"><i class="fa-solid fa-angles-right"></i> About Us</a></li>
+                                                <li><a href="gallery.html" style="color: white;"><i class="fa-solid fa-angles-right"></i> Gallery</a></li>
+                                                <li><a href="contact.html" style="color: white;"><i class="fa-solid fa-angles-right"></i> Contact</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="col-md-3">
+                                    <div class="social-links">
+                                        <h2 style="color: white;">Follow Us</h2>
+                                        <div class="social-icons">
+                                            <ul>
+                                                <li><a href="#" style="color: white;"><i class="fa-brands fa-facebook-f"></i> Facebook</a></li>
+                                                <li><a href="#" style="color: white;"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+                                                <li><a href="#" style="color: white;"><i class="fa-brands fa-linkedin-in"></i> Linkedin</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- footer section end -->
+                        <!-- footer copyright section start -->
+                        <section id="copy-right">
+                            <div class="copy-right-sec" style="color: white;"><i class="fa-solid fa-copyright"></i>
+                                © Pranjal Pagar – <a href="#" style="color: white;">2023</a>
+                            </div>
+                        </section>
+        </body>
+        </html>
+        
+       
+

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/product.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <style>
+        /* Updated CSS for the photo section */
+        
+        .photo-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.image-container {
+    position: relative;
+    text-align: center;
+}
+
+.photo1 {
+    width: 1200px; /* Adjust the size as needed */
+    height: 500px;
+    transition: transform 0.5s ease; /* Animation */
+    margin: 20px; /* Add a 10px margin between images */
+}
+
+.start-button {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    background-color: black; /* You can change the background color */
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.btn{
+            margin-top: 180px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="navbar">
+                <div class="container nav-container">
+                    <input class="checkbox" type="checkbox" name="" id="" />
+                    <div class="hamburger-lines">
+                        <span class="line line1"></span>
+                        <span class ="line line2"></span>
+                        <span class="line line3"></span>
+                    </div>
+                    <div class="logo-and-menu">
+                        <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Zara_Logo.svg/1280px-Zara_Logo.svg.png" alt="Zara Logo">
+                    </div>
+                    <div class="menu-items">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="#">about</a></li>
+                        <li><a href="#">blogs</a></li>
+                        <li><a href="#">portfolio</a></li>
+                        <li><a href="#">contact</a></li>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="rightoptions">
+            <a href="./search.html">
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="SEARCH" style="width: 300px; height: 30px;" />
+                </div>
+            </a>
+            <a href="login.html">LOG IN</a>
+            <a href="zarahelp.html">HELP</a>
+            <a href="shoppingBasket.html">SHOPPING BAG</a>
+        </div>
+    </header>
+    <button class="btn" ><a href="beautybestsellers.html">BEST SELLERS</a></button>    
+    <button class="btn" ><a href="lips.html">LIPS</a></button>
+    <button  class="btn" ><a href="face.html">FACE</a></button>
+    <button  class="btn"><a href="nailpaint.html">NAIL POLISH</a></button>
+    <button  class="btn"><a href="shadefinder.html">SHADE FINDER</a></button>
+    <button  class="btn"><a href="jeans.html">DISCOVER</a></button>
+     
+    
+    <section class="photo-section">
+        <div>
+          </a><img class="photo1" src="https://www.yslbeauty.ae/dw/image/v2/BDCL_PRD/on/demandware.static/-/Library-Sites-YSLSharedLibrary/default/dwda9e71be/ShadeFinder/updated-TE/foundation-shade-finder-screen-1-desktop.gif" alt="Image 1">
+          <button class="start-button"><a href="start.html">Start</button></a>
+        </div>
+        
+    </section>
+    
+    
+    <footer>
+        <div class="video-background">
+            <video id="video" class="slide" controls autoplay style="width: 100%; height: 100%;">
+                <source src="videoplayback.mp4" type="video/mp4">
+            </video>
+            
+            <div class="content-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                <h2 style="color: white;">Pranjal Pagar</h2>
+                <div class="container">
+                    <div class="row">
+                        <!-- Your existing footer content here -->
+                        <div class="col-md-3">
+                            <div class="useful-link">
+                                <h2 style="color: white;">Useful Links</h2>
+                                <div class="use-links">
+                                    <ul>
+                                        <li><a href="index.html" style="color: white;"><i class="fa-solid fa-angles-right"></i> Home</a></li>
+                                        <li><a href="about.html" style="color: white;"><i class="fa-solid fa-angles-right"></i> About Us</a></li>
+                                        <li><a href="gallery.html" style="color: white;"><i class="fa-solid fa-angles-right"></i> Gallery</a></li>
+                                        <li><a href="contact.html" style="color: white;"><i class="fa-solid fa-angles-right"></i> Contact</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="social-links">
+                                <h2 style="color: white;">Follow Us</h2>
+                                <div class="social-icons">
+                                    <ul>
+                                        <li><a href="#" style="color: white;"><i class="fa-brands fa-facebook-f"></i> Facebook</a></li>
+                                        <li><a href="#" style="color: white;"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+                                        <li><a href="#" style="color: white;"><i class="fa-brands fa-linkedin-in"></i> Linkedin</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- footer section end -->
+                <!-- footer copyright section start -->
+                <section id="copy-right">
+                    <div class="copy-right-sec" style="color: white;"><i class="fa-solid fa-copyright"></i>
+                        © Pranjal Pagar – <a href="#" style="color: white;">2023</a>
+                    </div>
+                </section>
+</body>
+</html>

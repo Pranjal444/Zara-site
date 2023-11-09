@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Image Viewer</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .scroll-box {
+            width: 300px;
+            height: 500px;
+            overflow: hidden;
+            position: relative;
+            white-space: nowrap;
+        }
+
+        .scroll-box img {
+            width: 100%;
+            height: auto;
+            display: inline-block;
+        }
+
+        .small-images {
+            display: flex;
+            justify-content: center;
+        }
+
+        .small-images img {
+            width: 50px;
+            height: 50px;
+            margin: 5px;
+            cursor: pointer;
+            filter: grayscale(100%);
+            transition: filter 0.3s;
+        }
+
+        .small-images img.active {
+            filter: none;
+        }
+
+        .left-box {
+            border: 1px solid black;
+            display: inline-block;
+            width: 300px;
+            height: 230px;
+            margin: 30px;
+            text-align: center; /* Center-align the content */
+        }
+
+        .right-boxes {
+            border: 1px solid black;
+            display: inline-block;
+            width: 300px;
+            height: 500px;
+            margin: 30px;
+            text-align: center; /* Center-align the content */
+        }
+
+        .right-box {
+            display: inline-block;
+            width: 300px;
+            height: 130px;
+        }
+
+        .size {
+            height: 26px;
+            width: 100px;
+            background-color: gray; /* Default gray background */
+            color: white; /* Default white text color */
+            cursor: not-allowed; /* Default cursor */
+        }
+
+        .size.active {
+            background-color: black; /* Active button background */
+            color: white; /* Active button text color */
+            cursor: pointer; /* Change cursor to pointer when active */
+        }
+    </style>
+</head>
+<body>
+<div class="left-box">
+    <h5>COMPOSITION, CARE & ORIGIN</h5>
+    <h5>COMPOSITION</h5>
+    <p>We work with monitoring programmes to ensure compliance with our social, environmental, and health and safety standards for our products. To assess compliance, we have developed a programme of audits and continuous improvement plans. View more</p>
+</div>
+<div class="image-container">
+    <div class="scroll-box">
+        <img src="https://static.zara.net/photos///2023/I/0/1/p/7969/268/800/2/w/750/7969268800_6_1_1.jpg?ts=1698683539011" alt="Image 1">
+        <img src="https://static.zara.net/photos///2023/I/0/1/p/7969/268/800/2/w/750/7969268800_6_2_1.jpg?ts=1698683537486" alt="Image 2">
+        <img src="https://static.zara.net/photos///2023/I/0/1/p/7969/268/800/2/w/750/7969268800_6_3_1.jpg?ts=1698683540945" alt="Image 3">
+    </div>
+    <div class="small-images">
+        <img src="https://static.zara.net/photos///2023/I/0/1/p/7969/268/800/2/w/750/7969268800_6_1_1.jpg?ts=1698683539011" alt="Image 1" class="filter" data-index="0">
+        <img src="https://static.zara.net/photos///2023/I/0/1/p/7969/268/800/2/w/750/7969268800_6_2_1.jpg?ts=1698683537486" alt="Image 2" class="filter" data-index="1">
+        <img src="https://static.zara.net/photos///2023/I/0/1/p/7969/268/800/2/w/750/7969268800_6_3_1.jpg?ts=1698683540945" alt="Image 3" class="filter" data-index="2">
+    </div>
+</div>
+<div class="right-boxes">
+    <div class="right-box">
+        <h5>SHIMMERY VELVET BODYSUIT</h5>
+        <h5>₹ 2,990.00</h5>
+        <p>MRP incl. of all taxes Bodysuit featuring a surplice neckline with rhinestones, side pleats, long sleeves and snap-button fastening at the bottom.</p>
+        <h6>CHECK IN-STORE AVAILABILITY</h6>
+        <h6>SHIPPING, EXCHANGES AND RETURNS</h6>
+    </div>
+    <div class="right-box">
+        _____________________________________
+        <p>BLACK | 7969/268</p>
+        <button class="size" data-size="XS">XS</button>
+        <button class="size" data-size="S">S</button>
+        <button class="size" data-size="M">M</button>
+        <button class="size" data-size="L">L</button>
+        <button class="size" data-size="XL">XL</button>
+        <h6>FIND YOUR SIZE | MEASUREMENT GUIDE</h6>
+    </div>
+    <div class="right-box">
+        _____________________________________
+        <p> <button class="size active" id="add-button" disabled> <a href="shi.html">Add</a></button></p>
+    </div>
+</div>
+<script src="script.js"></script>
+<script>
+    const smallImages = document.querySelectorAll('.filter');
+    const scrollBox = document.querySelector('.scroll-box');
+    const sizeButtons = document.querySelectorAll('.size');
+    const addButton = document.getElementById('add-button');
+
+    smallImages.forEach((img, index) => {
+        img.addEventListener('click', () => {
+            scrollBox.scrollTo({
+                left: index * scrollBox.clientWidth,
+                behavior: 'smooth',
+            });
+            removeActiveClass();
+            img.classList.add('active');
+        });
+    });
+
+    sizeButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            removeActiveSize();
+            button.classList.add('active');
+            addButton.removeAttribute('disabled');
+        });
+    });
+
+    function removeActiveClass() {
+        smallImages.forEach(img => {
+            img.classList.remove('active');
+        });
+    }
+
+    function removeActiveSize() {
+        sizeButtons.forEach(button => {
+            button.classList.remove('active');
+        });
+    }
+
+    // Initial activation of the first small image
+    smallImages[0].classList.add('active');
+</script>
+</body>
+</html>

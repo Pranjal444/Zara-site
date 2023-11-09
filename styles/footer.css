@@ -1,0 +1,38 @@
+
+  /* footer section end */
+  footer {
+    position: relative;
+}
+
+.video-background {
+    position: relative;
+}
+
+.content-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Additional styling for footer content */
+.useful-link,
+.social-links,
+#copy-right {
+    text-align: center;
+    color: white;
+}
+
+.fa-angles-right,
+.fa-facebook-f,
+.fa-instagram,
+.fa-linkedin-in,
+.fa-copyright {
+    margin-right: 8px;
+}

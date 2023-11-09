@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/header.css"> <!-- Include the CSS file -->
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        /* Header styles */
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between; /* Align elements to the right */
+            align-items: center;
+            padding: 0 20px;
+            z-index: 1; /* Set a higher z-index to position the header above the image */
+        }
+
+        .logo {
+            max-width: 200px; /* Adjust the size as needed */
+            animation: logoScale 2s ease-in-out forwards;
+            margin-left: -920px; /* Adjust margin for the logo */
+        }
+
+        .menu {
+            display: flex; /* Display menu items in a row */
+            align-items: center;
+            margin-left: 100px; /* Adjust margin for the menu */
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: black;
+            margin: 0 20px;
+            margin-top: 40px;
+        }
+
+        .rightoptions {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Add margin to push right options to the right */
+   
+}
+
+.search-box {
+            margin-right: 0; /* Change margin-right to move the search box closer */
+            margin-top: 70px;
+        }
+
+/* Styles for "HELP" and "SHOPPING BAG" */
+.rightoptions a {
+    text-decoration: none;
+    color: black;
+    margin: 0 10px;
+}
+        /* Slideshow container styles */
+        .slideshow-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            display: none;
+        }
+
+        .slide.active {
+            display: block;
+        }
+
+        @keyframes logoScale {
+            0% {
+                opacity: 0;
+                transform: scale(1);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1.5);
+            }
+        }
+
+        /* top left side hamburger section */
+        #hamburger {
+            width: 80px;
+            height: 40px;
+        }
+
+        #hamburgerIcon {
+            width: 25%;
+            padding-top: 1.2em;
+            padding-left: 1.5em;
+            cursor: pointer;
+           
+        }
+
+        /* Logo animation */
+        .logo {
+            max-width: 300px;
+            animation: logoScale 2s ease-in-out forwards;
+            margin-left: 150px; /* Adjust margin for the logo */
+            margin-top: 40px;
+        }
+
+        @keyframes logoScale {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.5);
+            }
+        }
+
+        /* Search box animation */
+        .search-box {
+            margin-top: 40px;
+            transition: transform 2s ease-in-out;
+            transform: translateY(100%);
+        }
+
+        .search-box.active {
+            transform: translateY(0);
+        }
+
+        /* Popup styles */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .open-popup {
+            display: flex;
+            margin-left: -400px;
+        }
+
+        .categories {
+            display: none;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            width: 600px;
+            margin-left: 300px;
+        }
+        .categories h3 {
+            margin: 0;
+        }
+
+        .categories ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .categories li {
+            margin: 5px 0;
+            display: inline-block; /* Display li elements inline */
+            margin-right: 20px; /* Add space between li elements */
+        }
+        .categories1 {
+          
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            width: 600px;
+           margin-left: 600px;
+        }
+        .categories1 h3 {
+            margin: 0;
+        }
+
+        .categories1 ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .categories1 li {
+            margin: 5px 0;
+            display: inline-block; /* Display li elements inline */
+            margin-right: 10px; /* Add space between li elements */
+        }
+        .popup button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .category-logo{
+            width: 200px;
+            height: 100px;
+        }
+        #hamburger-popup {
+        background-color: white;
+        margin-left: -600px;
+        }
+/* CSS */
+
+.close {
+  font-size: 45px;
+  font-weight: 600;
+}
+
+/* Media queries for mobile */
+/* Media queries for mobile */
+/*design for smartphones*/
+@media (max-width: 660px) {
+
+#hamburger-popup {
+    background-color: white;
+    margin-left: -300px;
+}
+
+.slideshow-container {
+    width: 100%;
+}
+
+.slide {
+    width: 100%;
+}
+.search-box.active{
+    width: 100%;
+}
+.logo {
+    max-width: 150px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.rightoptions,
+.search-box,
+.menu {
+    flex-direction: column;
+    align-items: center;
+    font-size: 30px;
+}
+
+.search-box {
+    margin-top: 20px;
+    margin-bottom: 20px; /* Move search box to the bottom */
+    text-align: center;
+}
+
+.categories,
+.categories1 {
+    width: 90%;
+    margin-left: 5%;
+    width: 100%;
+}
+
+.category-logo {
+    width: 150px;
+    height: 75px;
+}
+
+.menu a {
+    margin: 0 10px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.rightoptions {
+    margin-right: 10px;
+}
+
+.popup {
+    margin-left: -150px;
+    width: 100%;
+}
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="container nav-container">
+                <input class="checkbox" type="checkbox" name="" id="" /> <!-- Hamburger menu checkbox -->
+                <div class="hamburger-lines">
+                  <span class="line line1"></span>
+                  <span class="line line2"></span>
+                  <span class="line line3"></span>
+                </div>  
+                <div class="logo-and-menu">
+                  <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Zara_Logo.svg/1280px-Zara_Logo.svg.png" alt="Zara Logo">
+              </div>
+              <div class="menu">
+                <a href="#" id="woman-link" onclick="openPopup('woman')">WOMAN</a>
+                <a href="#" id="man-link" onclick="openPopup('man')">MAN</a>
+                <a href="#" id="kids-link" onclick="openPopup('kids')">KIDS</a>
+                <a href="#" id="beauty-link" onclick="openPopup('beauty')">BEAUTY</a>
+            </div>
+            <div class="popup" id="popup">
+              
+                
+                <div class="categories" id="woman-categories">
+                    <span class="close"  onclick="closePopup('popup')">&times;</span>
+                   
+                  <b><h3>Woman's Category Menu</h3></b>
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Zara_Logo.svg/1280px-Zara_Logo.svg.png" alt="Zara Logo" class="category-logo">
+                  <ul>
+                    <h3><li>Category menu</li></h3>
+                   
+                    <p>WOMAN      MAN       KIDS         BEAUTY </p>
+                    <p>____________________________________________________________</p>
+                    <button style="height:50px;width:200px;background-color:white;color: black;border: 1px solid black;"><a href="dresses.html"><li>DRESSES | JUMPSUITS</li></a></button>
+                    <button style="height:50px;width:200px;background-color:white;color: black;border: 1px solid black;"><a href="product.html"><li>TOPS | BODYSUITS</li></a></button>
+                    <button style="height:50px;width:200px;background-color:white;color: black;border: 1px solid black;"><a href="product.html"><li>CORD SETS</li></a></button>
+                    <button style="height:50px;width:200px;background-color:white;color: black;border: 1px solid black;"><a href="shirt.html"><li>SHIRTS</li></a></button>
+                    <button style="height:50px;width:200px;background-color:white;color: black;border: 1px solid black;"><a href="jeans.html"><li>JEANS</li></a></button>
+                    <button style="height:50px;width:200px;background-color:white;color: black;border: 1px solid black;"><a href="jackets.html"><li>JACKETS</li></a></button>
+                    <button style="height:50px;width:200px;background-color:white;color: black;border: 1px solid black;"><a href="skirts.html"><li>SKIRTS | SHORTS</li></a></button>
+                    <button style="height:50px;width:200px;background-color:white;color: black;border: 1px solid black;"><a href="blazers.html"><li>BLAZERS</li></a></button>
+                    <button style="height:50px;width:200px;background-color:white;color: black;border: 1px solid black;"><a href="suits.html"><li>SUITS</li></a></button>
+                    
+                   
+                    <!-- Add more woman's categories here -->
+                  </ul>
+                 
+                </div>
+                <div class="categories" id="man-categories">
+                    <span class="close"  onclick="closePopup('popup')">&times;</span>
+                    <h3><li>Man's Category Menu</li></h3>
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Zara_Logo.svg/1280px-Zara_Logo.svg.png" alt="Zara Logo" class="category-logo">
+                  <ul>
+                    <h3><li>Category menu</li></h3>
+                   
+                    <p>WOMAN      MAN       KIDS         BEAUTY </p>
+                    <p>____________________________________________________________</p>
+                    <button style="height:50px;width:200px;background-color:white;color: black;border: 1px solid black;"><a href="manbestsellers.html"><li>BEST SELLERS</li></a></button>
+                    <button style="height:50px;width:200px;background-color:white;color: black;border: 1px solid black;"><a href="puffers.html"><li>PUFFERS</li></a></button>
+                    <button style="height:50px;width:200px;background-color:white;color: black;border: 1px solid black;"><a href="coats.html"><li></li>COATS</a></button>
+                    <button style="height:50px;width:200px;background-color:white;color: black;border: 1px solid black;"><a href="manshirt.html"><li>SHIRTS</li></a></button>
+                    <button style="height:50px;width:200px;background-color:white;color: black;border: 1px solid black;"><a href="manjeans.html"><li>JEANS</li></a></button>
+                    <button style="height:50px;width:200px;background-color:white;color: black;border: 1px solid black;"><a href="manjackets.html"><li>JACKETS</li></a></button>
+                    <button style="height:50px;width:200px;background-color:white;color: black;border: 1px solid black;"><a href="tracksuits.html"><li>TRACKSUITS</li></a></button>
+                    <button style="height:50px;width:200px;background-color:white;color: black;border: 1px solid black;"><a href="manblazers.html"><li>BLAZERS</li></a></button>
+                    <button style="height:50px;width:200px;background-color:white;color: black;border: 1px solid black;"><a href="manhoddies.html"><li>HODDIES</li></a></button>
+                    
+                   
+                    <!-- Add more woman's categories here -->
+                  </ul>
+                 
+                </div>
+                <div class="categories" id="kids-categories">
+                    <span class="close"  onclick="closePopup('popup')">&times;</span>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Zara_Logo.svg/1280px-Zara_Logo.svg.png" alt="Zara Logo" class="category-logo">
+                    <h3>Kids Category Menu</h3>
+                    <ul>
+                        <h3><li>Category menu</li></h3>
+                   
+                        <p>WOMAN      MAN       KIDS         BEAUTY </p>
+                        <p>____________________________________________________________</p>
+                        <button style="height:50px;width:200px;background-color:white;color: black;border: 1px solid black;"><a href="dresses.html"><li>DRESSES | JUMPSUITS</li></a></button>
+                        <button style="height:50px;width:200px;background-color:white;color: black;border: 1px solid black;"><a href="product.html"><li>TOPS | BODYSUITS</li></a></button>
+                        <button style="height:50px;width:200px;background-color:white;color: black;border: 1px solid black;"><a href="product.html"><li>CORD SETS</li></a></button>
+                        <button style="height:50px;width:200px;background-color:white;color: black;border: 1px solid black;"><a href="shirt.html"><li>SHIRTS</li></a></button>
+                        <button style="height:50px;width:200px;background-color:white;color: black;border: 1px solid black;"><a href="jeans.html"><li>JEANS</li></a></button>
+                        <button style="height:50px;width:200px;background-color:white;color: black;border: 1px solid black;"><a href="jackets.html"><li>JACKETS</li></a></button>
+                        <button style="height:50px;width:200px;background-color:white;color: black;border: 1px solid black;"><a href="skirts.html"><li>SKIRTS | SHORTS</li></a></button>
+                        <button style="height:50px;width:200px;background-color:white;color: black;border: 1px solid black;"><a href="blazers.html"><li>BLAZERS</li></a></button>
+                        <button style="height:50px;width:200px;background-color:white;color: black;border: 1px solid black;"><a href="suits.html"><li>SUITS</li></a></button>
+                        
+                       
+                        <!-- Add more woman's categories here -->
+                      </ul>
+                </div>
+                <div  class="categories" id="beauty-categories">
+                    <span class="close"  onclick="closePopup('popup')">&times;</span>
+                    <h3>Beauty Category Menu</h3>
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Zara_Logo.svg/1280px-Zara_Logo.svg.png" alt="Zara Logo" class="category-logo">
+                  <ul>
+                    <h3><li>Category menu</li></h3>
+                   
+                    <p>WOMAN      MAN       KIDS         BEAUTY </p>
+                    <p>____________________________________________________________</p>
+
+                    <button style="height:50px;width:200px;background-color:white;color: black;border: 1px solid black;"><a href="beautybestsellers.html"><li>BEST SELLERS</li></a></button>
+                    <button style="height:50px;width:200px;background-color:white;color: black;border: 1px solid black;"><a href="lips.html"><li>LIPS</li></a></button>
+                    <button style="height:50px;width:200px;background-color:white;color: black;border: 1px solid black;"><a href="face.html"><li>FACE</li></a></button>
+                    <button style="height:50px;width:200px;background-color:white;color: black;border: 1px solid black;"><a href="nailpaint.html"><li>NAIL POLISH</li></a></button>
+                    <button style="height:50px;width:200px;background-color:white;color: black;border: 1px solid black;"><a href="shadefinder.html"><li>SHADE FINDER</li></a></button>
+                    <button style="height:50px;width:200px;background-color:white;color: black;border: 1px solid black;"><a href="jeans.html"><li>DISCOVER</li></a></button>
+                    
+                   
+                   
+                    <!-- Add more woman's categories here -->
+                  </ul>
+                </div>
+            </div>
+            
+              <div class="menu-items">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">blogs</a></li>
+                <li><a href="#">portfolio</a></li>
+                <li><a href="#">contact</a></li>
+              </div>
+            </div>
+          </div>
+    
+          <div class="rightoptions">
+            <a href="./search.html">
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="SEARCH" style="width: 300px; height: 30px;" />
+                </div>
+            </a>
+            <a href="login.html">LOG IN</a>
+            <a href="zarahelp.html">HELP</a>
+            <a href="shoppingBasket.html">SHOPPING BAG</a>
+          
+        </div>
+    </header>
+    <div class="slideshow-container">
+        <div class="slide-active" style="background-image: url('https://tse1.explicit.bing.net/th?id=OIP.Hg2TOHknQbzGYA9cehJ_RwHaD_&pid=Api&P=0&h=180');"></div>
+        <div class="slide " style="background-image: url('https://static.zara.net/photos///contents/mkt/spots/aw23-north-woman-new/subhome-xmedia-44//w/1920/IMAGE-landscape-fill-dec86b9b-d568-4c7d-baa8-7c319a4029c9-default_0.jpg?ts=1698601842346');"></div>
+        <div class="slide" style="background-image: url('https://static.zara.net/photos///contents/mkt/spots/aw23-north-woman-co-ords/subhome-xmedia-44//w/1920/IMAGE-landscape-fill-8636e964-0b2f-409a-93ab-bc3b9de11d1a-default_0.jpg?ts=1698671794847');"></div>
+        <div class="slide" style="background-image: url('https://static.zara.net/photos///contents/mkt/spots/aw23-north-woman-coats/subhome-xmedia-44//w/1920/IMAGE-landscape-fill-98372553-521e-4f2a-8761-014c6162c6cd-default_0.jpg?ts=1698602769997');"></div>
+        <div class="slide" style="background-image: url('https://static.zara.net/photos///contents/mkt/spots/aw23-north-woman-shoes-and-bags/subhome-xmedia-44//w/1920/IMAGE-landscape-fill-36bba2d8-2746-4c04-9b4c-23673e0de9e7-default_0.jpg?ts=1698603185485');"></div>
+        <!-- Add a video element -->
+        <video id="video" class="slide" controls loop style="display: none; width: 100%; height: 100%; margin-left: 50px;">
+            <source src="./myvideo.mp4.mp4" type="video/mp4">
+        </video>
+        <div class="slide" style="background-image: url('https://static.zara.net/photos///contents/mkt/spots/aw23-north-woman-shoes-and-bags/subhome-xmedia-44//w/1920/IMAGE-landscape-fill-36bba2d8-2746-4c04-9b4c-23673e0de9e7-default_0.jpg?ts=1698603185485');"></div>
+    </div>
+    <script>
+       const slides = document.querySelectorAll('.slide');
+let index = 0;
+const video = document.getElementById('video');
+
+function toggleSlide() {
+    if (index < slides.length - 1) {
+        slides[index].classList.remove('active');
+        index = (index + 1) % slides.length;
+        slides[index].classList.add('active');
+    } else {
+        // If all images have been displayed, show the video
+        video.classList.add('active', 'video-fullscreen');
+        video.style.display = 'block';
+        video.play();
+        video.addEventListener('play', playVideoFullscreen);
+        clearInterval(slideInterval); // Stop the image slideshow
+    }
+}
+
+const slideInterval = setInterval(toggleSlide, 4000); // Toggle slide every 4 seconds
+
+// Add the following JavaScript to trigger the search box animation on page load
+window.addEventListener('load', function () {
+    const searchBox = document.querySelector('.search-box');
+    searchBox.classList.add('active');
+});
+
+let popup = document.getElementById("popup");
+let womanCategories = document.getElementById("woman-categories");
+let manCategories = document.getElementById("man-categories");
+let kidsCategories = document.getElementById("kids-categories");
+let beautyCategories = document.getElementById("beauty-categories");
+
+function openPopup(category) {
+  popup.classList.add("open-popup");
+  if (category === 'woman') {
+    womanCategories.style.display = 'block';
+    manCategories.style.display = 'none';
+    beautyCategories.style.display = 'none';
+    kidsCategories.style.display = 'none';
+  } else if (category === 'man') {
+    womanCategories.style.display = 'none';
+    manCategories.style.display = 'block';
+    beautyCategories.style.display = 'none';
+    kidsCategories.style.display = 'none';
+  }else if (category === 'kids') {
+    womanCategories.style.display = 'none';
+    kidsCategories.style.display = 'block';
+    manCategories.style.display = 'none';
+    beautyCategories.style.display = 'none';} 
+  else if (category === 'beauty') {
+    womanCategories.style.display = 'none';
+    manCategories.style.display = 'none';
+    beautyCategories.style.display = 'block';
+    kidsCategories.style.display = 'none';
+  }
+}
+
+function closePopup(popupId) {
+    const popup = document.getElementById(popupId);
+    if (popup) {
+        popup.classList.remove("open-popup");
+    }
+}
+
+const hamburgerPopup = document.getElementById("hamburger-popup");
+        const hamburgerCategories = document.getElementById("hamburger-categories");
+
+        function toggleHamburgerPopup() {
+            if (hamburgerPopup.style.display === "none" || !hamburgerPopup.style.display) {
+                openHamburgerPopup();
+            } else {
+                closeHamburgerPopup();
+            }
+        }
+
+        function openHamburgerPopup() {
+            hamburgerPopup.style.display = "flex";
+            // You can add content to the hamburgerCategories here
+        }
+
+        function closeHamburgerPopup() {
+            hamburgerPopup.style.display = "none";
+        }
+
+    </script>
+</body>
+</html>
